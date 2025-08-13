@@ -206,9 +206,10 @@ feff_site_0_feffit_report.txt
 
 3. **artifacts/ directory containing:**
 
-- pinn_model.keras — your pretrained Keras model.
 
-- scalers.pkl — joblib dictionary referencing the scalers used during training.
+- pinn_model.keras 
+
+- scalers.pkl 
 
 ----
 
