@@ -4,10 +4,10 @@
 **Affiliation:** BM08-XAFS/XRF Beamline, SESAME Synchrotron Light Source  
 **Date:** 13 August 2025
 
-This **repository** provides two integrated workflows using **Physics-Informed Neural Networks (PINNs)** for **X-ray Absorption Fine Structure (XAFS)** analysis:
+This **repository** provides two integrated workflows using **Physics-Informed Neural Networks (PINNs)** for **Extended X-ray Absorption Fine Structure (EXAFS) data** analysis:
 
-1. **PINN Model training pipeline** — trains a PINN on EXAFS datasets and evaluates it on unseen data.
-2. **Experimental fit & PINN Prediction pipeline** - Fit the experimental EXAFS data with **FEFF + XrayLarch**, - Predict EXAFS for the experimental data using the **trained PINN model** (plot comparison).
+1. **PINN Model training pipeline** — trains a PINN on EXAFS datasets and evaluates it on unseen data (train_pinn_exafs.py).
+2. **Experimental fit & PINN Prediction pipeline** - Fit the experimental EXAFS data with **FEFF + XrayLarch**, - Predict EXAFS for the experimental data using the **trained PINN model** and plot comparison (exafs_fit_and_prediction.py).
 
 > **Note:**  
 > - The **first script** (train_pinn_exafs.py) is for **training the PINN model on EXAFS datasets** and testing it on unseen data.  
