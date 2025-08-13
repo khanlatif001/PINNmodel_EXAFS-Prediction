@@ -108,7 +108,7 @@ python -c "import xraylarch, tensorflow, pymatgen, py3Dmol, plotly; print('impor
 
 • **Install venv:**
 
-sudo pipX.X install virtualenv
+sudo pipX.X install virtualenv 
 
 
 • **Create venv:**
