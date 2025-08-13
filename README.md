@@ -55,7 +55,7 @@ This **repository** provides two integrated workflows using **Physics-Informed N
 
 **1.** **FEFF CODES ( FEFF6-lite,  FEFF8-lite)**
 
-**FEFF codes** have implemented in the python.
+**FEFF codes** have implemented in the python sceipt.
 
 Running **FEFF simulations** for all the **absorber sites in `.cif` crystal structures** automatically (via `Struct2XAS`).
 
@@ -97,7 +97,7 @@ pip install "xraylarch[larix]"
 pip install py3Dmol
 
 
-Verify:
+**Verify:**
 
 
 python -c "import xraylarch, tensorflow, pymatgen, py3Dmol, plotly; print('imports ok')"
@@ -129,31 +129,31 @@ source myenv /bin/activate
 
 deactivate
 
-
+---
 
 📌 **Usage**
 
 
 1️⃣ **Training the PINN model**
 
-
-Train on EXAFS dataset, save the model, and evaluate on unseen data.
-
-
-python train_pinn_exafs.py ## Train the PINN Model on EXAFS datasets
-
-
-python train_pinn_exafs.py --test ## Test on unseen EXAFS data
+This script is implemented **PINN model** on EXAFS data traning/prediction
+1. **Data Loading:** reads paired .dat files from experimental and theoretical folders.
+2. **Preprocessing:** standardizes each input (chik.k2) and output using StandardScaler
+3. Saves scalers for use during prediction on unseen data.
+4. **Defining and Training model:**  Traning model on **EXAFS datasets** (Input data and Lables).
+5. Saving the model.
+6. Evaluating and testing model on unseen data.
 
 **Output:**
-- **Trained model:** artifacts/pinn_model.h5
+- **Trained model:** artifacts/pinn_model.keras
 
 
 - **Scalers:** artifacts/scalers.pkl
 
 
-- Training logs and metrics in console.
+- **Training logs and metrics** in console.
 
+---
 
 2️⃣ **Experimental EXAFS data fit & model Prediction comparison**
 
@@ -186,7 +186,7 @@ This script provides a **complete automated workflow** for:
 
 **Fit metrics (parameters)** printed to console and save as feff_site_0_feffit_report.tx.
 
-----
+
 **Files in Working Directory** needed For Experimental EXAFS data fit & model Prediction comparison:
 
 1. ***.cif files** in the working directory — the script loops over CIFs.
