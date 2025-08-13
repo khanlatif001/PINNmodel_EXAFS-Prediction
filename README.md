@@ -4,7 +4,7 @@
 **Affiliation:** BM08-XAFS/XRF Beamline, SESAME Synchrotron Light Source  
 **Date:** 13 August 2025
 
-This repository provides two integrated workflows using **Physics-Informed Neural Networks (PINNs)** for X-ray Absorption Fine Structure (XAFS) analysis:
+This **repository** provides two integrated workflows using **Physics-Informed Neural Networks (PINNs)** for X-ray Absorption Fine Structure (XAFS) analysis:
 
 1. **Training pipeline** — trains a PINN on EXAFS datasets and evaluates it on unseen data.
 2. **Experimental fit & PINN Prediction comparison pipeline** — fits experimental EXAFS data with FEFF + XrayLarch, Model prediction EXAFS using the trained model, and compares results.
@@ -53,17 +53,19 @@ This repository provides two integrated workflows using **Physics-Informed Neura
 
 ### External Software
 
-1. **FEFF** ( FEFF6-lite,  FEFF8-lite)
+**1.** **FEFF CODES ( FEFF6-lite,  FEFF8-lite)**
 
-- FEFF codes have implemented in the python
-- running **FEFF** simulations for all the absorber sites in `.cif` crystal structures automatically (via `Struct2XAS`).
+**FEFF codes** have implemented in the python.
 
-2. **Larch** (Xraylarch)
+Running **FEFF simulations** for all the **absorber sites in `.cif` crystal structures** automatically (via `Struct2XAS`).
 
-Install **XrayLarch** via conda:
+**2.** **Larch Package (Xraylarch)**
+
+**Install XrayLarch via conda:**
 
 
 conda install -yc conda-forge xraylarch
+
 
 pip install "xraylarch[larix]"
 
@@ -71,16 +73,13 @@ pip install "xraylarch[larix]"
 Python Version 3.8–3.11 with pip or conda.
 
 
-**Python Dependencies** Listed in requirements.txt, please Install:
+**Python Dependencies Listed in requirements.txt, please Install:**
 
 
 pip install -r requirements.txt
 
 
-Note: Use conda install for heavy packages like TensorFlow, pymatgen, and XrayLarch to avoid build issues.
-
-
-Quick Setup (Conda)
+**Note:** Use conda install for heavy packages like **TensorFlow, pymatgen, and XrayLarch** to avoid build issues - Quick Setup (Conda):
 
 
 conda create -n pinn-xafs python=3.10 -y
@@ -104,31 +103,38 @@ Verify:
 python -c "import xraylarch, tensorflow, pymatgen, py3Dmol, plotly; print('imports ok')"
 
 
-One can also create a virtual environment in Linux and install the above dependencies and packages/softwares
+**One can also create a virtual environment in Linux and install the above dependencies and packages/softwares:**
 
 
-• Install venv
+• **Install venv:**
+
 sudo pipX.X install virtualenv
-• Create venv
 
+
+• **Create venv:**
 
 pythonX.X-m venvmyvenv
+
+
 virtualenv-p pythonX.Xmyvenv
 
 
-• Activate venv
+• **Activate venv:**
+
+
 source myenv /bin/activate
 
 
-• Deactivate venv
+• **Deactivate venv:**
+
 deactivate
 
 
 
-📌 Usage
+📌 **Usage**
 
 
-1️⃣ Training the PINN model
+1️⃣ **Training the PINN model**
 
 
 Train on EXAFS dataset, save the model, and evaluate on unseen data.
@@ -139,17 +145,17 @@ python train_pinn_exafs.py ## Train the PINN Model on EXAFS datasets
 
 python train_pinn_exafs.py --test ## Test on unseen EXAFS data
 
-Output:
-Trained model: artifacts/pinn_model.h5
+**Output:**
+- **Trained model:** artifacts/pinn_model.h5
 
 
-Scalers: artifacts/scalers.pkl
+- **Scalers:** artifacts/scalers.pkl
 
 
-Training logs and metrics in console.
+- Training logs and metrics in console.
 
 
-2️⃣ Experimental EXAFS data fit & model Prediction comparison
+2️⃣ **Experimental EXAFS data fit & model Prediction comparison**
 
 
 This script provides a **complete automated workflow** for:
@@ -158,19 +164,12 @@ This script provides a **complete automated workflow** for:
 3. Predicting χ(k) and χ(R) using a pretrained **Physics-Informed Neural Network (PINN)** model.
 4. Generating **interactive HTML visualizations** of χ(k)·k² and χ(R), and **3D structural renderings** of CIF files.
 
-
-Use experimental EXAFS data, run FEFF + XrayLarch fitting, predict with the trained PINN, and compare.
-
-
-
-python exafs_fit_and_prediction.py ## Compare Experimental EXAFS data fit with XrayLarch and PINN prediction
-
   
-Output:
+**Output:**
 
-FEFF folders: cifFile/feff_site_*/
+**FEFF folders:** cifFile/feff_site_*/
 
-Interactive plots: cifFile/feff_site_*/plots/*.html, save as following in subfolder of each cifFile_folder (feff_site_x):
+**Interactive plots:** cifFile/feff_site_*/plots/*.html, saveing in subfolder of each cifFile_folder (feff_site_x):
 
 
 - feff_site_x_FEFFLarch_fit_plot
@@ -178,31 +177,31 @@ Interactive plots: cifFile/feff_site_*/plots/*.html, save as following in subfol
   
 - feff_site_x_pinn_prediction_plot
 
-Fit and Model Prediction EXAFS Data: Save to the feff_site_x subfolder:
+**Fit and Model Prediction EXAFS Data:** Save to the feff_site_x subfolder:
 
 - feff_site_x_pinn_prediction_chi-k2.txt
 
   
 - feff_site_x_pinn_prediction_chir.txt
 
-Fit metrics (parameters) printed to console and save as feff_site_0_feffit_report.tx.
+**Fit metrics (parameters)** printed to console and save as feff_site_0_feffit_report.tx.
 
 ----
-Files in Working Directory needed For Experimental EXAFS data fit & model Prediction comparison
+**Files in Working Directory** needed For Experimental EXAFS data fit & model Prediction comparison:
 
-*.cif files in the working directory — the script loops over CIFs.
+1. ***.cif files** in the working directory — the script loops over CIFs.
 
-An experimental EXAFS file (background-removed) assigned to EXP_DATA_FILE (default in script: CdS_10K_01.xdi.txt.nor). This path can be absolute or relative.
+2. **Experimental EXAFS** file (background-removed) assigned to EXP_DATA_FILE (default in script: CdS_10K_01.xdi.txt.nor). This path can be absolute or relative.
 
-artifacts/ directory containing:
+3. **artifacts/ directory containing:**
 
-pinn_model.keras — your pretrained Keras model.
+- pinn_model.keras — your pretrained Keras model.
 
-scalers.pkl — joblib dictionary referencing the scalers used during training.
+- scalers.pkl — joblib dictionary referencing the scalers used during training.
 
 ----
 
-📜 Citation
+📜 **Citation**
 
 If you use this repository in your research, please cite:
 
