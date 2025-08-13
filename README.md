@@ -136,13 +136,21 @@ deactivate
 
 1️⃣ **Training the PINN model**
 
+**Running the Script**
+- **Training model** from scratch:
+  
+  python3 train_pinn_exafs.py
+
+- **Prediction only** (test on unseen data):
+
+  python3 train_pinn_exafs.py --test
+
 This script is implemented **PINN model** on EXAFS data traning/prediction
-1. **Data Loading:** reads paired .dat files from experimental and theoretical folders.
-2. **Preprocessing:** standardizes each input (chik.k2) and output using StandardScaler
+1. **Data Loading:** Reads paired .dat files from experimental and theoretical folders.
+2. **Preprocessing:** Standardizes each input (chik.k2) and output using StandardScaler
 3. Saves scalers for use during prediction on unseen data.
 4. **Defining and Training model:**  Traning model on **EXAFS datasets** (Input data and Lables).
-5. Saving the model.
-6. Evaluating and testing model on unseen data.
+5. **Trained PINN Model Evaluation and Test:** Evaluating and testing model on unseen data.
 
 **Output:**
 - **Trained model:** artifacts/pinn_model.keras
