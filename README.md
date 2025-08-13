@@ -175,9 +175,7 @@ This script provides a **complete automated workflow** for:
   
 **Output:**
 
-**FEFF folders:** feff_site_*/
-
-**Interactive plots:** feff_site_**/plots.html:**
+**Interactive plots:** feff_site_**/plots.html**
 
 
 - feff_site_x_FEFFLarch_fit_plot
@@ -185,7 +183,7 @@ This script provides a **complete automated workflow** for:
   
 - feff_site_x_pinn_prediction_plot
 
-**XrayLarch Fit and PINN Model Prediction EXAFS Data:** 
+**XrayLarch Fit and PINN Model Prediction EXAFS Data** 
 
 - feff_site_x_pinn_prediction_chi-k2.txt
 
@@ -193,18 +191,18 @@ This script provides a **complete automated workflow** for:
 - feff_site_x_pinn_prediction_chir.txt
  
 
-**Fit metrics (parameters):**
+**Fit metrics (parameters)**
 
-feff_site_0_feffit_report.txt
+- feff_site_0_feffit_report.txt
 
 
-**Files in Working Directory:**
+**Mandatory Files in Working Directory:**
 
 Following files should be in working directory to run the **XrayLarch-Fit_and_PINN Model-Prediction** script
 
 1. ***.cif files** — the script loops over CIFs.
 2. **Experimental EXAFS data** - the file (background-removed) assigned to EXP_DATA_FILE (default in script: CdS_10K_01.xdi.txt.nor). 
-3. **artifacts/ directory containing**
+3. **artifacts folder in directory**
 - pinn_model.keras 
 - scalers.pkl 
 
