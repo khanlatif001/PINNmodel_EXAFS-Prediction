@@ -1,0 +1,173 @@
+=================== FEFFIT RESULTS ====================
+[[Statistics]]
+  n_function_calls     = 2428
+  n_variables          = 20
+  n_data_points        = 326
+  n_independent        = 32.8309886
+  chi_square           = 540.900518
+  reduced chi_square   = 42.1557944
+  r-factor             = 0.00685290
+  Akaike info crit     = 131.987917
+  Bayesian info crit   = 161.815374
+ 
+[[Variables]]
+  delr_0001            = -0.0063293 +/-unknown  (init= 1.0000e-3)
+  delr_0002            =  0.0035590 +/-unknown  (init= 1.0000e-3)
+  delr_0003            =  0.3184719 +/-unknown  (init= 1.0000e-3)
+  delr_0004            = -0.0312664 +/-unknown  (init= 1.0000e-3)
+  delr_0005            =  0.0034533 +/-unknown  (init= 1.0000e-3)
+  delr_0006            =  0.4264616 +/-unknown  (init= 1.0000e-3)
+  delr_0008            =  0.1153818 +/-unknown  (init= 1.0000e-3)
+  delr_0009            =  0.1276812 +/-unknown  (init= 1.0000e-3)
+  delr_0010            =  0.0257260 +/-unknown  (init= 1.0000e-3)
+  e0                   =  9.0435552 +/-unknown  (init= 1.0000e-3)
+  s02                  =  0.7642682 +/-unknown  (init= 1.0000000)
+  sigma2_0001          =  0.0017890 +/-unknown  (init= 0.0076000)
+  sigma2_0002          =  0.0031974 +/-unknown  (init= 0.0077000)
+  sigma2_0003          =  0.2652667 +/-unknown  (init= 0.0078000)
+  sigma2_0004          =  1.542e-11 +/-unknown  (init= 0.0079000)
+  sigma2_0005          =  0.0068440 +/-unknown  (init= 0.0080000)
+  sigma2_0006          =  0.0094323 +/-unknown  (init= 0.0081000)
+  sigma2_0008          =  6.140e-10 +/-unknown  (init= 0.0082000)
+  sigma2_0009          =  0.0101661 +/-unknown  (init= 0.0083000)
+  sigma2_0010          =  0.0030511 +/-unknown  (init= 0.0084000)
+ 
+[[Correlations]] (unreported correlations are <  0.100)
+ 
+[[Dataset]]
+  unique_id            = 'ds5rjcip'
+  fit space            = 'r'
+  r-range              = 1.000, 6.000
+  k-range              = 2.000, 12.000
+  k window, dk         = 'Kaiser-Bessel', 4.000
+  paths used in fit    = ['EntryWithCollCode31075\\feff_site_0\\feff0001.dat', 'EntryWithCollCode31075\\feff_site_0\\feff0002.dat', 'EntryWithCollCode31075\\feff_site_0\\feff0003.dat', 'EntryWithCollCode31075\\feff_site_0\\feff0004.dat', 'EntryWithCollCode31075\\feff_site_0\\feff0005.dat', 'EntryWithCollCode31075\\feff_site_0\\feff0006.dat', 'EntryWithCollCode31075\\feff_site_0\\feff0008.dat', 'EntryWithCollCode31075\\feff_site_0\\feff0009.dat', 'EntryWithCollCode31075\\feff_site_0\\feff0010.dat']
+  k-weight             = 2
+  epsilon_k            = Array(mean=4.4842e-4, std=0.0010911)
+  epsilon_r            = 0.0063096
+  n_independent        = 32.831
+ 
+[[Paths]]
+ = Path '0001' = Cd(abs K Edge
+    feffdat file = EntryWithCollCode31075\feff_site_0\feff0001.dat, from feff run 'feff_site_0'
+    geometry  atom      x        y        z      ipot
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+             S2-      -1.4580, -1.4580,  1.4580  2
+     reff   =  2.5253000
+     degen  =  4.0000000
+     n*s02  =  0.7642682  := 's02'
+     e0     =  9.0435552  := 'e0'
+     r      =  2.5189707  := 'reff + delr_0001'
+     deltar = -0.0063293  := 'delr_0001'
+     sigma2 =  0.0017890  := 'sigma2_0001'
+
+ = Path '0002' = Cd(abs K Edge
+    feffdat file = EntryWithCollCode31075\feff_site_0\feff0002.dat, from feff run 'feff_site_0'
+    geometry  atom      x        y        z      ipot
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+            Cd2+      -0.0000, -2.9160,  2.9160  1
+     reff   =  4.1238000
+     degen  =  12.000000
+     n*s02  =  0.7642682  := 's02'
+     e0     =  9.0435552  := 'e0'
+     r      =  4.1273590  := 'reff + delr_0002'
+     deltar =  0.0035590  := 'delr_0002'
+     sigma2 =  0.0031974  := 'sigma2_0002'
+
+ = Path '0003' = Cd(abs K Edge
+    feffdat file = EntryWithCollCode31075\feff_site_0\feff0003.dat, from feff run 'feff_site_0'
+    geometry  atom      x        y        z      ipot
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+             S2-       1.4580,  1.4580,  1.4580  2
+             S2-      -1.4580, -1.4580,  1.4580  2
+     reff   =  4.5873000
+     degen  =  12.000000
+     n*s02  =  0.7642682  := 's02'
+     e0     =  9.0435552  := 'e0'
+     r      =  4.9057719  := 'reff + delr_0003'
+     deltar =  0.3184719  := 'delr_0003'
+     sigma2 =  0.2652667  := 'sigma2_0003'
+
+ = Path '0004' = Cd(abs K Edge
+    feffdat file = EntryWithCollCode31075\feff_site_0\feff0004.dat, from feff run 'feff_site_0'
+    geometry  atom      x        y        z      ipot
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+            Cd2+      -2.9160,  2.9160, -0.0000  1
+             S2-      -1.4580,  1.4580, -1.4580  2
+     reff   =  4.5873000
+     degen  =  24.000000
+     n*s02  =  0.7642682  := 's02'
+     e0     =  9.0435552  := 'e0'
+     r      =  4.5560336  := 'reff + delr_0004'
+     deltar = -0.0312664  := 'delr_0004'
+     sigma2 =  1.542e-11  := 'sigma2_0004'
+
+ = Path '0005' = Cd(abs K Edge
+    feffdat file = EntryWithCollCode31075\feff_site_0\feff0005.dat, from feff run 'feff_site_0'
+    geometry  atom      x        y        z      ipot
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+             S2-       4.3740, -1.4580,  1.4580  2
+     reff   =  4.8356000
+     degen  =  12.000000
+     n*s02  =  0.7642682  := 's02'
+     e0     =  9.0435552  := 'e0'
+     r      =  4.8390533  := 'reff + delr_0005'
+     deltar =  0.0034533  := 'delr_0005'
+     sigma2 =  0.0068440  := 'sigma2_0005'
+
+ = Path '0006' = Cd(abs K Edge
+    feffdat file = EntryWithCollCode31075\feff_site_0\feff0006.dat, from feff run 'feff_site_0'
+    geometry  atom      x        y        z      ipot
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+             S2-      -1.4580, -1.4580,  1.4580  2
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+             S2-      -1.4580, -1.4580,  1.4580  2
+     reff   =  5.0507000
+     degen  =  4.0000000
+     n*s02  =  0.7642682  := 's02'
+     e0     =  9.0435552  := 'e0'
+     r      =  5.4771616  := 'reff + delr_0006'
+     deltar =  0.4264616  := 'delr_0006'
+     sigma2 =  0.0094323  := 'sigma2_0006'
+
+ = Path '0008' = Cd(abs K Edge
+    feffdat file = EntryWithCollCode31075\feff_site_0\feff0008.dat, from feff run 'feff_site_0'
+    geometry  atom      x        y        z      ipot
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+             S2-       1.4580, -1.4580,  4.3740  2
+             S2-       1.4580,  1.4580,  1.4580  2
+     reff   =  5.7424000
+     degen  =  48.000000
+     n*s02  =  0.7642682  := 's02'
+     e0     =  9.0435552  := 'e0'
+     r      =  5.8577818  := 'reff + delr_0008'
+     deltar =  0.1153818  := 'delr_0008'
+     sigma2 =  6.140e-10  := 'sigma2_0008'
+
+ = Path '0009' = Cd(abs K Edge
+    feffdat file = EntryWithCollCode31075\feff_site_0\feff0009.dat, from feff run 'feff_site_0'
+    geometry  atom      x        y        z      ipot
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+             S2-      -4.3740,  1.4580,  1.4580  2
+            Cd2+      -2.9160, -0.0000,  2.9160  1
+     reff   =  5.7424000
+     degen  =  48.000000
+     n*s02  =  0.7642682  := 's02'
+     e0     =  9.0435552  := 'e0'
+     r      =  5.8700812  := 'reff + delr_0009'
+     deltar =  0.1276812  := 'delr_0009'
+     sigma2 =  0.0101661  := 'sigma2_0009'
+
+ = Path '0010' = Cd(abs K Edge
+    feffdat file = EntryWithCollCode31075\feff_site_0\feff0010.dat, from feff run 'feff_site_0'
+    geometry  atom      x        y        z      ipot
+            Cd(abs      -0.0000, -0.0000, -0.0000  0 (absorber)
+            Cd2+      -0.0000, -5.8320, -0.0000  1
+     reff   =  5.8320000
+     degen  =  6.0000000
+     n*s02  =  0.7642682  := 's02'
+     e0     =  9.0435552  := 'e0'
+     r      =  5.8577260  := 'reff + delr_0010'
+     deltar =  0.0257260  := 'delr_0010'
+     sigma2 =  0.0030511  := 'sigma2_0010'
+
+=======================================================
