@@ -24,14 +24,14 @@ This repository provides two integrated workflows using **Physics-Informed Neura
 
 ## 📂 Repository Structure
 
-├── train_pinn_exafs.py # Script 1: Train & evaluate PINN model on EXAFS data
-├── exafs_fit_and_prediction.py # Script 2: Experimental fit & model prediction comparison
-├── artifacts/ # Stores trained models & scalers
-│ ├── pinn_model.h5
-│ └── scalers.pkl
-├── Input_data # Contain floders of Theoretical EXAFS data χk_FEFF·k² calculated from CIF files of the corresponding material
-├── Labels # Contain folders of Experimental EXAFS data χk_exp·k² for respective material
-├── requirements.txt # Python dependencies
+├── train_pinn_exafs.py            # Script 1: Train & evaluate PINN model on EXAFS data
+├── exafs_fit_and_prediction.py    # Script 2: Experimental fit & model prediction comparison
+├── artifacts/                     # Stores trained models & scalers
+│   ├── pinn_model.h5
+│   └── scalers.pkl
+├── Input_data/                    # Theoretical EXAFS χ(k)·k² from CIF files
+├── Labels/                        # Experimental EXAFS χ(k)·k² data
+├── requirements.txt               # Python dependencies
 └── README.md
 
 ---
