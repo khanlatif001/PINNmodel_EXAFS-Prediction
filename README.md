@@ -33,8 +33,8 @@ This **repository** provides two integrated workflows using **Physics-Informed N
 ├── train_pinn_exafs.py            # Script 1: Train & evaluate PINN model on EXAFS data
 ├── exafs_fit_and_prediction.py    # Script 2: Experimental fit & model prediction comparison
 ├── artifacts/                     # Stores trained models & scalers
-│   ├── pinn_model.h5
-│   └── scalers.pkl
+│   ├── pinn_model.keras
+│   ├── scalers.pkl
 ├── Input_data/                    # Theoretical EXAFS χ(k)·k² from CIF files
 ├── Labels/                        # Experimental EXAFS χ(k)·k² data
 ├── requirements.txt               # Python dependencies
@@ -200,15 +200,12 @@ feff_site_0_feffit_report.txt
 
 **Files in Working Directory:**
 
-1. ***.cif files** in the working directory — the script loops over CIFs.
+Following files should be in working directory to run the **XrayLarch-Fit_and_PINN Model-Prediction** script
 
-2. **Experimental EXAFS** file (background-removed) assigned to EXP_DATA_FILE (default in script: CdS_10K_01.xdi.txt.nor). This path can be absolute or relative.
-
-3. **artifacts/ directory containing:**
-
-
+1. ***.cif files** — the script loops over CIFs.
+2. **Experimental EXAFS data** - the file (background-removed) assigned to EXP_DATA_FILE (default in script: CdS_10K_01.xdi.txt.nor). 
+3. **artifacts/ directory containing**
 - pinn_model.keras 
-
 - scalers.pkl 
 
 ----
