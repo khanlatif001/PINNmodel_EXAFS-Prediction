@@ -1,5 +1,9 @@
 # Physics-Informed Neural Networks for EXAFS Analysis
 
+**Author:** Latif Ullah Khan  
+**Affiliation:** BM08-XAFS/XRF Beamline, SESAME Synchrotron Light Source  
+**Date:** 13 August 2025
+
 This repository provides two integrated workflows using **Physics-Informed Neural Networks (PINNs)** for X-ray Absorption Fine Structure (XAFS) analysis:
 
 1. **Training pipeline** — trains a PINN on EXAFS datasets and evaluates it on unseen data.
@@ -12,13 +16,15 @@ This repository provides two integrated workflows using **Physics-Informed Neura
 ---
 
 ## 🚀 Features
-- End-to-end training and evaluation of a PINN on EXAFS datasets.
-- Physics-informed loss functions incorporating theoretical constraints.
-- Automatic FEFF input/output generation from CIF crystal structures.
-- Experimental data fitting via XrayLarch’s `feffit`.
-- Parallel FEFF runs for faster computation.
-- Interactive Plotly visualizations.
-- Direct comparison between fitted and predicted EXAFS data.
+- **End-to-end training and evaluation** of a PINN on EXAFS datasets.
+- **Physics-informed loss functions** incorporating theoretical constraints.
+- **Multi-site FEFF automation** from CIF files (via `Struct2XAS`).
+- **Path sorting by R<sub>eff</sub>** for optimal EXAFS fitting.
+- **Simultaneous fitting** of multiple absorber sites in lattice using XrayLarch.
+- **PINN model integration** for EXAFS prediction.
+- **Direct comparison** between fitted and predicted EXAFS data.
+- **Interactive Plotly HTML plots** for χ(k)·k² and χ(R) (magnitude & real part).
+- **3D CIF visualization** with py3Dmol.
 
 ---
 
@@ -46,9 +52,15 @@ This repository provides two integrated workflows using **Physics-Informed Neura
 ---
 
 ### External Software
-1. **Larch** (Xraylarch)
 
-Install XrayLarch via conda:
+1. **FEFF** ( FEFF6-lite,  FEFF8-lite)
+
+- FEFF codes have implemented in the python
+- running **FEFF** simulations for all the absorber sites in `.cif` crystal structures automatically (via `Struct2XAS`).
+
+2. **Larch** (Xraylarch)
+
+Install **XrayLarch** via conda:
 
 
 conda install -yc conda-forge xraylarch
@@ -59,13 +71,11 @@ pip install "xraylarch[larix]"
 Python Version 3.8–3.11 with pip or conda.
 
 
-Python Dependencies Listed in requirements.txt:
-
-
-Please Install:
+**Python Dependencies** Listed in requirements.txt, please Install:
 
 
 pip install -r requirements.txt
+
 
 Note: Use conda install for heavy packages like TensorFlow, pymatgen, and XrayLarch to avoid build issues.
 
@@ -142,6 +152,13 @@ Training logs and metrics in console.
 2️⃣ Experimental EXAFS data fit & model Prediction comparison
 
 
+This script provides a **complete automated workflow** for:
+1. Running **FEFF** simulations for all absorber sites in `.cif` crystal structures.
+2. Fitting FEFF-generated scattering paths to **experimental EXAFS χ(k)** data using [XrayLarch](https://xraypy.github.io/xraylarch/).
+3. Predicting χ(k) and χ(R) using a pretrained **Physics-Informed Neural Network (PINN)** model.
+4. Generating **interactive HTML visualizations** of χ(k)·k² and χ(R), and **3D structural renderings** of CIF files.
+
+
 Use experimental EXAFS data, run FEFF + XrayLarch fitting, predict with the trained PINN, and compare.
 
 
@@ -179,7 +196,7 @@ An experimental EXAFS file (background-removed) assigned to EXP_DATA_FILE (defau
 
 artifacts/ directory containing:
 
-pinn_model.h5 — your pretrained Keras model.
+pinn_model.keras — your pretrained Keras model.
 
 scalers.pkl — joblib dictionary referencing the scalers used during training.
 
