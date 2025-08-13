@@ -4,10 +4,10 @@
 **Affiliation:** BM08-XAFS/XRF Beamline, SESAME Synchrotron Light Source  
 **Date:** 13 August 2025
 
-This **repository** provides two integrated workflows using **Physics-Informed Neural Networks (PINNs)** for X-ray Absorption Fine Structure (XAFS) analysis:
+This **repository** provides two integrated workflows using **Physics-Informed Neural Networks (PINNs)** for **X-ray Absorption Fine Structure (XAFS)** analysis:
 
-1. **Training pipeline** — trains a PINN on EXAFS datasets and evaluates it on unseen data.
-2. **Experimental fit & PINN Prediction comparison pipeline** — fits experimental EXAFS data with FEFF + XrayLarch, Model prediction EXAFS using the trained model, and compares results.
+1. **PINN Model training pipeline** — trains a PINN on EXAFS datasets and evaluates it on unseen data.
+2. **Experimental fit & PINN Prediction pipeline** - Fit the experimental EXAFS data with **FEFF + XrayLarch**, - Predict EXAFS for the experimental data using the **trained PINN model** (plot comparison).
 
 > **Note:**  
 > - The **first script** (train_pinn_exafs.py) is for **training the PINN model on EXAFS datasets** and testing it on unseen data.  
@@ -134,7 +134,7 @@ deactivate
 📌 **Usage**
 
 
-1️⃣ **Training the PINN model**
+1️⃣ **Training the PINN Model**
 
 **Running the Script**
 - **Training model** from scratch:
@@ -163,7 +163,7 @@ This script is implemented **PINN model** on EXAFS data traning/prediction
 
 ---
 
-2️⃣ **Experimental EXAFS data fit & model Prediction comparison**
+2️⃣ **Experimental EXAFS Data Fit & PINN Model Prediction EXAFS**
 
 
 This script provides a **complete automated workflow** for:
@@ -175,9 +175,9 @@ This script provides a **complete automated workflow** for:
   
 **Output:**
 
-**FEFF folders:** cifFile/feff_site_*/
+**FEFF folders:** feff_site_*/
 
-**Interactive plots:** cifFile/feff_site_*/plots/*.html, saveing in subfolder of each cifFile_folder (feff_site_x):
+**Interactive plots:** feff_site_**/plots.html:**
 
 
 - feff_site_x_FEFFLarch_fit_plot
@@ -185,17 +185,20 @@ This script provides a **complete automated workflow** for:
   
 - feff_site_x_pinn_prediction_plot
 
-**Fit and Model Prediction EXAFS Data:** Save to the feff_site_x subfolder:
+**XrayLarch Fit and PINN Model Prediction EXAFS Data:** 
 
 - feff_site_x_pinn_prediction_chi-k2.txt
 
   
 - feff_site_x_pinn_prediction_chir.txt
+ 
 
-**Fit metrics (parameters)** printed to console and save as feff_site_0_feffit_report.tx.
+**Fit metrics (parameters):**
+
+feff_site_0_feffit_report.txt
 
 
-**Files in Working Directory** needed For Experimental EXAFS data fit & model Prediction comparison:
+**Files in Working Directory:**
 
 1. ***.cif files** in the working directory — the script loops over CIFs.
 
