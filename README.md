@@ -185,3 +185,11 @@ scalers.pkl — joblib dictionary referencing the scalers used during training.
 
 ----
 
+📜 Citation
+
+If you use this simulation in your research, please cite:
+
+Latif U. Khan, Physics-Informed Neural Networks (PINNs) for Extended X-ray Absorption Fine Structure (EXAFS) Data Analysis: Fast and Accurate Local Atomic Structure Prediction. BM08-XAFS/XRF Beamline, Synchrotron-light for Experimental Science and Applications in the Middle East (SESAME) 2025.  
+
+
+
