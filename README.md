@@ -55,7 +55,7 @@ This **repository** provides two integrated workflows using **Physics-Informed N
 
 **1.** **FEFF CODES ( FEFF6-lite,  FEFF8-lite)**
 
-**FEFF codes** have implemented in the python sceipt.
+**FEFF codes** have implemented in the python script.
 
 Running **FEFF simulations** for all the **absorber sites in `.cif` crystal structures** automatically (via `Struct2XAS`).
 
