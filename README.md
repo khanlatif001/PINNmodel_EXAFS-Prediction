@@ -61,22 +61,22 @@ Running **FEFF simulations** for all the **absorber sites in `.cif` crystal stru
 
 **2.** **Larch Package (Xraylarch)**
 
-**Install XrayLarch via conda:**
+- **Install XrayLarch via conda:**
+
+   ```sh
+  conda install -yc conda-forge xraylarch
 
 
-conda install -yc conda-forge xraylarch
-
-
-pip install "xraylarch[larix]"
+  pip install "xraylarch[larix]"
 
 
 Python Version 3.8–3.11 with pip or conda.
 
 
-**Python Dependencies Listed in requirements.txt, please Install:**
+- **Python Dependencies Listed in requirements.txt, please Install:**
 
-
-pip install -r requirements.txt
+  ```sh
+  pip install -r requirements.txt
 
 
 **Note:** Use conda install for heavy packages like **TensorFlow, pymatgen, and XrayLarch** to avoid build issues - Quick Setup (Conda):
@@ -97,10 +97,10 @@ pip install "xraylarch[larix]"
 pip install py3Dmol
 
 
-**Verify:**
+- **Verify:**
 
-
-python -c "import xraylarch, tensorflow, pymatgen, py3Dmol, plotly; print('imports ok')"
+  ```sh
+  python -c "import xraylarch, tensorflow, pymatgen, py3Dmol, plotly; print('imports ok')"
 
 
 **One can also create a virtual environment in Linux and install the above dependencies and packages/softwares:**
@@ -138,11 +138,11 @@ deactivate
 
 **Running the Script**
 - **Training model** from scratch:
-  
+  ```sh
   python3 train_pinn_exafs.py
 
 - **Prediction only** (test on unseen data):
-
+  ```sh
   python3 train_pinn_exafs.py --test
 
 This script is implemented **PINN model** on EXAFS data traning/prediction
@@ -151,6 +151,10 @@ This script is implemented **PINN model** on EXAFS data traning/prediction
 3. Saves scalers for use during prediction on unseen data.
 4. **Defining and Training model:**  Traning model on **EXAFS datasets** (Input data and Lables).
 5. **Trained PINN Model Evaluation and Test:** Evaluating and testing model on unseen data.
+ 
+- **Running the Script**
+  ```sh
+  python3 exafs_fit_and_prediction.py
 
 **Output:**
 - **Trained model:** artifacts/pinn_model.keras
